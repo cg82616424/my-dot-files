@@ -1,0 +1,7 @@
+* dot files 
+** spaceemacs config
+*** monokai theme
+*** siwpper
+*** relative-linum-mode
+** zsh rc
+*** change a theme to train
