@@ -27,8 +27,7 @@ values."
      better-defaults
      emacs-lisp
      ;; git
-     ;; markdown
-     osx
+     markdown
      (colors :variables
              colors-enable-nyan-cat-progress-bar t)
      org
@@ -36,6 +35,8 @@ values."
      c-c++
      python
      chinese
+     sr-speedbar
+     shell-scripts
       (shell :variables
              shell-default-height 30
              shell-default-position 'bottom)
@@ -49,6 +50,7 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(mwe-log-commands swiper)
+   dotspacemacs-additional-packages '(mwe-log-commands sr-speedbar)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -248,17 +250,17 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
-(set-language-environment "UTF-8")
-(set-default-coding-systems 'utf-8)
-(set-buffer-file-coding-system 'utf-8-unix)
-(set-clipboard-coding-system 'utf-8-unix)
-(set-file-name-coding-system 'utf-8-unix)
-(set-keyboard-coding-system 'utf-8-unix)
-(set-next-selection-coding-system 'utf-8-unix)
-(set-selection-coding-system 'utf-8-unix)
-(set-terminal-coding-system 'utf-8-unix)
-(setq locale-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
+   (set-language-environment "UTF-8")
+   (set-default-coding-systems 'utf-8)
+   (set-buffer-file-coding-system 'utf-8-unix)
+   (set-clipboard-coding-system 'utf-8-unix)
+   (set-file-name-coding-system 'utf-8-unix)
+   (set-keyboard-coding-system 'utf-8-unix)
+   (set-next-selection-coding-system 'utf-8-unix)
+   (set-selection-coding-system 'utf-8-unix)
+   (set-terminal-coding-system 'utf-8-unix)
+   (setq locale-coding-system 'utf-8)
+   (prefer-coding-system 'utf-8)
   )
 
 (defun dotspacemacs/user-config ()
@@ -271,9 +273,9 @@ you should place you code here."
   (global-set-key (kbd "C-s") 'swiper)
   (global-company-mode t)
   (add-hook 'prog-mode-hook 'linum-relative-mode)
-  
-  
+  (setq python-fill-column 99)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+
