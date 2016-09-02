@@ -3,5 +3,6 @@
 *** monokai theme
 *** siwpper
 *** relative-linum-mode
+*** sr-speedbar mode key binding is spc f s
 ** zsh rc
-*** change a theme to train
+*** change theme
