@@ -18,12 +18,16 @@ values."
    ;; of a list then all discovered layers will be installed.
    dotspacemacs-configuration-layers
    '(
+     nginx
+     yaml
+     javascript
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     auto-completion
+     (auto-completion :variables
+                      auto-completion-enable-help-tooltip t)
      better-defaults
      emacs-lisp
      ;; git
@@ -50,7 +54,7 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(mwe-log-commands swiper)
-   dotspacemacs-additional-packages '(mwe-log-commands sr-speedbar)
+   
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '()
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -250,6 +254,10 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (setq configuration-layer--elpa-archives
+        '(("melpa-cn" . "http://elpa.zilongshanren.com/melpa/")
+          ("org-cn"   . "http://elpa.zilongshanren.com/org/")
+          ("gnu-cn"   . "http://elpa.zilongshanren.com/gnu/")))
    (set-language-environment "UTF-8")
    (set-default-coding-systems 'utf-8)
    (set-buffer-file-coding-system 'utf-8-unix)
@@ -273,7 +281,11 @@ you should place you code here."
   (global-set-key (kbd "C-s") 'swiper)
   (global-company-mode t)
   (add-hook 'prog-mode-hook 'linum-relative-mode)
-  (setq python-fill-column 99)
+  (setq-default dotspacemacs-configuration-layers
+                  '((python :variables python-sort-imports-on-save t)))
+  (setq-default dotspacemacs-configuration-layers
+                '((python :variables python-fill-column 99)))
+  
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
