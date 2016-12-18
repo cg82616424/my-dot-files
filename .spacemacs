@@ -21,13 +21,14 @@ values."
      nginx
      yaml
      javascript
+     BaiduCodeCheck
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      (auto-completion :variables
-                      auto-completion-enable-help-tooltip t)
+                      auto-completion-enable-snippets-in-popup t)
      better-defaults
      emacs-lisp
      ;; git
@@ -37,7 +38,10 @@ values."
      org
      php
      c-c++
-     python
+     (python :variables
+             python-sort-imports-on-save t
+             python-fill-column 99
+             )
      chinese
      sr-speedbar
      shell-scripts
@@ -281,11 +285,6 @@ you should place you code here."
   (global-set-key (kbd "C-s") 'swiper)
   (global-company-mode t)
   (add-hook 'prog-mode-hook 'linum-relative-mode)
-  (setq-default dotspacemacs-configuration-layers
-                  '((python :variables python-sort-imports-on-save t)))
-  (setq-default dotspacemacs-configuration-layers
-                '((python :variables python-fill-column 99)))
-  
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
