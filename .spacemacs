@@ -37,7 +37,7 @@ values."
              colors-enable-nyan-cat-progress-bar t)
      org
      php
-     c-c++
+     (c-c++ :variables c-c++-enable-clang-support t)
      (python :variables
              python-sort-imports-on-save t
              python-fill-column 99
@@ -290,3 +290,27 @@ you should place you code here."
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(safe-local-variable-values
+   (quote
+    ((flycheck-clang-include-path /home/work/chengang06/html-dom/html-dom/wdm-64_BRANCH/output/include)
+     (flycheck-clang-include-path . "../output/include")
+     (flycheck-clang-include-path list
+                                  (expand-file-name "/home/work/chengang06/html-dom/html-dom/wdm-64_BRANCH/output/include/"))
+     (flycheck-clang-include-path . /home/work/chengang06/html-dom/html-dom/wdm-64_BRANCH/output/include/)
+     (flycheck-clang-include-path . "/home/work/chengang06/html-dom/html-dom/wdm-64_BRANCH/output/include/")
+     (flycheck-clang-include-path . "/home/work/chengang06/html-dom/html-dom/wdm-64_BRANCH/output/include")
+     (flycheck-clang-include-path
+      (quote
+       ("/home/work/chengang06/html-dom/html-dom/wdm-64_BRANCH/output/include")))
+     (flycheck-clang-include-path . /home/work/chengang06/html-dom/html-dom/wdm-64_BRANCH/output/include)))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
