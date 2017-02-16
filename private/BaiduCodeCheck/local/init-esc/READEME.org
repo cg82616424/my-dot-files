@@ -1,4 +1,0 @@
-* Eagle Style Checker
-** Esc (Eagle-style-checker) is a emacs plugin for style checking in Baidu.
-** chengang06 @op modified a little to adapt spacemacs layer roles, source code is provide by wangjunwei, if you do not use spacemacs, please visit http://icode.baidu.com/repo/baidu%2Fwangjuwnei%2Fesc/files/master/tree/
-

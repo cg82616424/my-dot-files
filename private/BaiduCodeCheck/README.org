@@ -1,6 +1,0 @@
-* BaiduCodeCheck 
-** BaiduCodeCheck is a spacemacs layer written by chengang06 @op
-*** based on esc by wangjunwei
-*** usage
-**** put directory BaiduCodeCheck to you spacemacs private directory and add layer name to your .spacemacs file
-**** need eagle.py 
