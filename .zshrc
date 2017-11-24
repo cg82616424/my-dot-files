@@ -1,5 +1,4 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/work/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -57,7 +56,8 @@ plugins=(git history-substring-search dirhistory  urltools jsontools catimg extr
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
-
+setopt EXTENDED_HISTORY
+export HISTTIMEFORMAT="%F %T `whoami` "
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -84,3 +84,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias e=emacs
 alias vim="emacs -q"
+alias mkcur= 'mkdir `date  +%Y%m%d`'
