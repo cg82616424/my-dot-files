@@ -84,4 +84,6 @@ export HISTTIMEFORMAT="%F %T `whoami` "
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias e=emacs
 alias vim="emacs -q"
-alias mkcur= 'mkdir `date  +%Y%m%d`'
+alias mkcur="mkdir `date  +%Y%m%d`;cd `date  +%Y%m%d`"
+alias gftp="get_ftp.py"
+alias wgetmedia "wget_media_list.py"
